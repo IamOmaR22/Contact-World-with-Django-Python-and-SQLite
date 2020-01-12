@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required # It will making searc
 from django.urls import reverse_lazy
 from django.contrib import messages
 
+
 # Create your views here.
 # def home(request):
 #     context = {'contacts':Contact.objects.all()}
