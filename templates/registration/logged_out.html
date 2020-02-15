@@ -1,17 +1,24 @@
+
 {% extends 'base.html' %}
+
+
 {% block title %}
 Logout
 {% endblock title %}
+
 
 {% block content %}
 <div class="container">
   <h2 class="heading font-weight-light text-center">Login</h2>
   <hr>
-  </div>
-  <div class="container w-25 card p-4 mt-4">
+</div>
+<div class="container w-25 card p-4 mt-4 bg-dark text-light">
   <p class="font-weight-light">
     You have been logged out. <br>
-    You can log in again <a href="{% url 'login' %}" class="text-info">using this link</a>
+    You can log in again &nbsp;&nbsp;&nbsp;
+      <a href="{% url 'login' %}" class="text-info">
+      <button type="button" class="btn btn-outline-light">Using this link</button>
+      </a>
   </p>
-  </div>
+</div>
 {% endblock content %}

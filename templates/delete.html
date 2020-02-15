@@ -1,7 +1,10 @@
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
-{% block title %}
 
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+{% block title %}
 {% if contact.manager == request.user %}
 Delete {{ contact }}
 {% else %}
@@ -9,8 +12,8 @@ You don't have access to this page!
 {% endif %}
 {% endblock title %}
 
-{% block content %}
 
+{% block content %}
 {% if contact.manager == request.user %}
 <div class="container">
   <h2 class="heading font-weight-light text-center">Delete {{ contact }}</h2>

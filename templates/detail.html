@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 
 {% load static %}
@@ -10,8 +11,8 @@ You don't have access to this page!
 {% endif %}
 {% endblock title %}
 
-{% block content %}
 
+{% block content %}
 {% if contact.manager == request.user %}
 <!-- Main Section -->
 <div class="container">

@@ -26,12 +26,15 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     />
+
     <link rel="title icon" href="{% static 'images/contact-icon.png' %}">
+
     <title>
       {% block title %}
 
       {% endblock title %}
     </title>
+
   </head>
   <body>
     <!-- Navbar -->
@@ -40,8 +43,9 @@
       <a class="logo" href="{% url 'home' %}">
         <i class="fas fa-user-circle"></i>&nbsp;Contact World
       </a>
-      <p class="feature-link m-0 p-0">
 
+      <p class="feature-link m-0 p-0">
+    <!-- When user is logged in(User can get access of Log Out and Add Contact) start -->
       {% if request.user.is_authenticated%}
       <a href="{% url 'logout' %}" class="mr-4 text-white">
         <i class="fas fa-sign-in-alt"></i> &nbsp; Log out
@@ -49,6 +53,9 @@
       <a href="{% url 'create' %}" class="mr-4 text-white">
         <i class="fas fa-plus"></i> &nbsp; Add Contact
       </a>
+    <!-- When user is logged in(User can get access of Log Out and Add Contact) End -->
+
+    <!-- When user is not logged in(User have to Signup or Login to get access) start -->
       {% else %}
       <a href="{% url 'signup' %}" class="mr-4 text-white">
         <i class="fas fa-user-plus"></i> &nbsp; Sign Up
@@ -57,8 +64,10 @@
         <i class="fas fa-sign-in-alt"></i> &nbsp; Log in
       </a>
       {% endif %}
-
+    <!-- When user is not logged in(User have to Signup or Login to get access) End -->
       </p>
+
+    <!-- Search Start -->
       <form class="form-inline my-2" action="{% url 'search' %}" method="GET">
         <input
           class="form-control search-box"
@@ -68,14 +77,20 @@
           value = "{{ search_term }}"
         />
       </form>
+    <!-- Search End -->
+
     </nav>
     <!-- Navbar ends -->
+
     <br />
+
     {% include "partials/_message.html" %}
+
     {% block content %}
 
     {% endblock content %}
-    <!-- footer -->
+
+    <!-- footer start -->
     <footer class="mt-4 p-2 bg-dark">
       <p class="text-center p-1 m-0">&copy; My Contacts 2019</p>
     </footer>

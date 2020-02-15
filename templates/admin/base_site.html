@@ -1,10 +1,17 @@
-{% extends 'admin/base.html' %} <!-- in admin directory there is no base.html.but, django uses this file automatically -->
+
+<!-- In admin directory there is no base.html. But, django uses this file automatically -->
+{% extends 'admin/base.html' %}
+
 {% load static %}
+
+
 {% block branding %}
 <h1 id="head">
   Contacts Project
 </h1>
 {% endblock branding %}
+
+
 
 {% block extrastyle %}
 <link rel="stylesheet" href="{% static 'css/admin.css' %}">
