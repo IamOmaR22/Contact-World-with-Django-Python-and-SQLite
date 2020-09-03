@@ -11,4 +11,5 @@ urlpatterns = [
     path('contacts/update/<int:pk>', views.ContactUpdateView.as_view(), name = "update"),
     path('contacts/delete/<int:pk>', views.ContactDeleteView.as_view(), name = "delete"),
     path('signup/', views.SignUpView.as_view(), name = "signup"),
+    path('about/', views.about, name='about'),
 ]

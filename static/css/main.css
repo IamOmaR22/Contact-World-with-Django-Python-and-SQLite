@@ -16,12 +16,12 @@ nav {
   justify-content: space-around;
   background-color: var(--back);
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .logo {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 1px;
   /* background: var(--logo); */
   color: white;

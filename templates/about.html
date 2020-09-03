@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} About Me {% endblock title %}
+
+{% block content %}
+    <div class="container my-4">
+    <h4 class="text-info">{{ about_text }}</h4>
+  </div>
+
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h2 class="featurette-heading text-success">{{ omar1 }} <span class="text-muted">{{ omar2 }}</span></h2>
+    <p class="lead mt-4">A Full Stack Developer with Experience in Python, Django, PostgreSQL / SQLite / Firebase / MySQL. Looking for opportunities, learning new skills, and polishing current ones. <strong>I'm open-source development enthusiast.</strong></p>
+    <p class="lead">Have also been involved in personal research on Machine Learning and Natural Language Processing.</p>
+  </div>
+  <div class="col-md-4">
+    <img class="featurette-image img-fluid mx-auto shadow-lg p-1 bg-secondary rounded" alt="250x250" id="a" style="width: 250px; height: 250px!important;" src="/static/images/omar.jpg" data-holder-rendered="true">
+    <div class="my-3">
+      <a target="_blank" href="https://www.mdomarfaruk.tk"><button class="btn btn-outline-dark" type="button" name="button">My Portfolio</button></a>
+    </div>
+  </div>
+</div>
+{% endblock %}

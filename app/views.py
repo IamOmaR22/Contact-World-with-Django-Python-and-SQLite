@@ -105,3 +105,13 @@ class SignUpView(CreateView):
     template_name = 'registration/signup.html'
     success_url = reverse_lazy('home') # By using reverse_lazy, we can go to home directly
 ###--##--### Sign Up End ###--##--###
+
+
+def about(reqest):
+
+    context = {
+        'about_text':"Welcome To About Page",
+        'omar1':"Hi! I am Md. Omar Faruk,",
+        'omar2':" a web developer focused on crafting great web experiences."
+    }
+    return render(reqest, 'about.html', context)
